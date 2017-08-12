@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda4c53a-17d2-4b28-bcd9-5efa35c6ea07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section22/Edge.py" afterPath="$PROJECT_DIR$/Section22/Edge.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section22/Graph.py" afterPath="$PROJECT_DIR$/Section22/Graph.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section22/test.py" afterPath="$PROJECT_DIR$/Section22/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test.py" afterPath="$PROJECT_DIR$/Test.py" />
     </list>
     <ignored path="IAlgorithms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,13 +22,13 @@
     <SUITE FILE_PATH="coverage/IAlgorithms$ActivitySelect_GA.coverage" NAME="ActivitySelect-GA Coverage Results" MODIFIED="1501811980011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
     <SUITE FILE_PATH="coverage/IAlgorithms$LCS.coverage" NAME="LCS Coverage Results" MODIFIED="1501902422735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section15" />
     <SUITE FILE_PATH="coverage/IAlgorithms$Test.coverage" NAME="Test Coverage Results" MODIFIED="1502524189263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IAlgorithms$test.coverage" NAME="test Coverage Results" MODIFIED="1502540111209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section22" />
+    <SUITE FILE_PATH="coverage/IAlgorithms$test.coverage" NAME="test Coverage Results" MODIFIED="1502548226826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section22" />
     <SUITE FILE_PATH="coverage/IAlgorithms$BackpackProblem.coverage" NAME="BackpackProblem Coverage Results" MODIFIED="1501933035333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
     <SUITE FILE_PATH="coverage/IAlgorithms$Activity_DA.coverage" NAME="Activity-DA Coverage Results" MODIFIED="1501813528522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
     <SUITE FILE_PATH="coverage/IAlgorithms$MinSSE.coverage" NAME="MinSSE Coverage Results" MODIFIED="1501851041844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section15" />
     <SUITE FILE_PATH="coverage/IAlgorithms$SplitProblem.coverage" NAME="SplitProblem Coverage Results" MODIFIED="1500613034804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section15" />
     <SUITE FILE_PATH="coverage/IAlgorithms$FractionalKnapsackProblem.coverage" NAME="FractionalKnapsackProblem Coverage Results" MODIFIED="1501934439698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
-    <SUITE FILE_PATH="coverage/IAlgorithms$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1502508840108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section22" />
+    <SUITE FILE_PATH="coverage/IAlgorithms$Graph.coverage" NAME="Graph Coverage Results" MODIFIED="1502548497891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section22" />
     <SUITE FILE_PATH="coverage/IAlgorithms$pydevd.coverage" NAME="pydevd Coverage Results" MODIFIED="1499328200739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev" />
     <SUITE FILE_PATH="coverage/IAlgorithms$BTree.coverage" NAME="BTree Coverage Results" MODIFIED="1500973643016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section12" />
     <SUITE FILE_PATH="coverage/IAlgorithms$merge.coverage" NAME="merge Coverage Results" MODIFIED="1499340900883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section3" />
@@ -48,28 +47,33 @@
       <file leaf-file-name="Graph.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Section22/Graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="219" column="17" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
+            <state relative-caret-position="252">
+              <caret line="281" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
                 <element signature="e#75#135#1" expanded="false" />
                 <element signature="e#197#315#0" expanded="false" />
                 <element signature="e#363#579#0" expanded="false" />
-                <element signature="e#788#1071#0" expanded="false" />
-                <element signature="e#1130#1619#0" expanded="false" />
-                <element signature="e#1675#1992#0" expanded="false" />
-                <element signature="e#2028#2495#0" expanded="false" />
-                <element signature="e#4206#4845#0" expanded="false" />
-                <element signature="e#4889#5067#0" expanded="false" />
-                <element signature="e#5109#5139#0" expanded="false" />
-                <element signature="e#5767#6432#0" expanded="false" />
-                <element signature="e#6481#6613#0" expanded="false" />
-                <element signature="e#6679#6748#0" expanded="false" />
-                <element signature="e#6812#6838#0" expanded="false" />
-                <element signature="e#6878#7073#0" expanded="false" />
-                <element signature="e#7130#7780#0" expanded="false" />
-                <element signature="e#7831#8064#0" expanded="false" />
-                <marker date="1502540111000" expanded="false" signature="615:749" ph="..." />
+                <element signature="e#802#850#0" expanded="false" />
+                <element signature="e#897#1368#0" expanded="false" />
+                <element signature="e#1407#1690#0" expanded="false" />
+                <element signature="e#1749#2238#0" expanded="false" />
+                <element signature="e#2294#2611#0" expanded="false" />
+                <element signature="e#2647#3114#0" expanded="false" />
+                <element signature="e#4851#5490#0" expanded="false" />
+                <element signature="e#5534#5712#0" expanded="false" />
+                <element signature="e#5936#6230#0" expanded="false" />
+                <element signature="e#6310#6933#0" expanded="false" />
+                <element signature="e#6981#7646#0" expanded="false" />
+                <element signature="e#7695#7827#0" expanded="false" />
+                <element signature="e#7893#7962#0" expanded="false" />
+                <element signature="e#8026#8052#0" expanded="false" />
+                <element signature="e#8092#8287#0" expanded="false" />
+                <element signature="e#8344#8994#0" expanded="false" />
+                <element signature="e#9045#9278#0" expanded="false" />
+                <marker date="1502548947000" expanded="false" signature="615:749" ph="..." />
+                <marker date="1502548947000" expanded="false" signature="3176:4810" ph="..." />
+                <marker date="1502548947000" expanded="false" signature="5745:5899" ph="..." />
               </folding>
             </state>
           </provider>
@@ -88,8 +92,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Section22/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+            <state relative-caret-position="461">
+              <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -160,13 +164,13 @@
         <option value="$PROJECT_DIR$/Section22/g.json" />
         <option value="$PROJECT_DIR$/Section22/graph.json" />
         <option value="$PROJECT_DIR$/Section22/dg.json" />
-        <option value="$PROJECT_DIR$/Section22/Edge.py" />
         <option value="$PROJECT_DIR$/Section22/topograph.json" />
         <option value="$PROJECT_DIR$/Section22/transgraph.json" />
         <option value="$PROJECT_DIR$/Section22/ssc.json" />
         <option value="$PROJECT_DIR$/Section22/Vertice.py" />
         <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/Section22/test.py" />
+        <option value="$PROJECT_DIR$/Section22/Edge.py" />
         <option value="$PROJECT_DIR$/Section22/Graph.py" />
       </list>
     </option>
@@ -268,7 +272,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.Graph">
     <configuration default="false" name="FractionalKnapsackProblem" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -969,9 +973,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Graph" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Graph" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Test" />
         <item index="3" class="java.lang.String" itemvalue="Python.Test (1)" />
         <item index="4" class="java.lang.String" itemvalue="Python.FractionalKnapsackProblem" />
       </list>
@@ -1032,12 +1036,12 @@
       <workItem from="1502450045626" duration="2665000" />
       <workItem from="1502502660672" duration="6221000" />
       <workItem from="1502509151184" duration="456000" />
-      <workItem from="1502517905219" duration="11384000" />
+      <workItem from="1502517905219" duration="15400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152625000" />
+    <option name="totallyTimeSpent" value="156641000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1058,11 +1062,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48880598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48880598" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.108726755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.108726755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1074,7 +1079,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1330,13 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2016.2/python_stubs/-1199944087/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="76" column="7" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Section12/tree.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1401,14 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section22/Edge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1464,40 +1453,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2016.2/python_stubs/-1199944087/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="387" column="4" selection-start-line="387" selection-start-column="4" selection-end-line="387" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Section22/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
+        <state relative-caret-position="461">
+          <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="e#25#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Section22/Edge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Section22/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="219" column="17" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
+        <state relative-caret-position="252">
+          <caret line="281" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
           <folding>
             <element signature="e#24#51#0" expanded="true" />
             <element signature="e#75#135#1" expanded="false" />
             <element signature="e#197#315#0" expanded="false" />
             <element signature="e#363#579#0" expanded="false" />
-            <element signature="e#788#1071#0" expanded="false" />
-            <element signature="e#1130#1619#0" expanded="false" />
-            <element signature="e#1675#1992#0" expanded="false" />
-            <element signature="e#2028#2495#0" expanded="false" />
-            <element signature="e#4206#4845#0" expanded="false" />
-            <element signature="e#4889#5067#0" expanded="false" />
-            <element signature="e#5109#5139#0" expanded="false" />
-            <element signature="e#5767#6432#0" expanded="false" />
-            <element signature="e#6481#6613#0" expanded="false" />
-            <element signature="e#6679#6748#0" expanded="false" />
-            <element signature="e#6812#6838#0" expanded="false" />
-            <element signature="e#6878#7073#0" expanded="false" />
-            <element signature="e#7130#7780#0" expanded="false" />
-            <element signature="e#7831#8064#0" expanded="false" />
-            <marker date="1502540111000" expanded="false" signature="615:749" ph="..." />
+            <element signature="e#802#850#0" expanded="false" />
+            <element signature="e#897#1368#0" expanded="false" />
+            <element signature="e#1407#1690#0" expanded="false" />
+            <element signature="e#1749#2238#0" expanded="false" />
+            <element signature="e#2294#2611#0" expanded="false" />
+            <element signature="e#2647#3114#0" expanded="false" />
+            <element signature="e#4851#5490#0" expanded="false" />
+            <element signature="e#5534#5712#0" expanded="false" />
+            <element signature="e#5936#6230#0" expanded="false" />
+            <element signature="e#6310#6933#0" expanded="false" />
+            <element signature="e#6981#7646#0" expanded="false" />
+            <element signature="e#7695#7827#0" expanded="false" />
+            <element signature="e#7893#7962#0" expanded="false" />
+            <element signature="e#8026#8052#0" expanded="false" />
+            <element signature="e#8092#8287#0" expanded="false" />
+            <element signature="e#8344#8994#0" expanded="false" />
+            <element signature="e#9045#9278#0" expanded="false" />
+            <marker date="1502548947000" expanded="false" signature="615:749" ph="..." />
+            <marker date="1502548947000" expanded="false" signature="3176:4810" ph="..." />
+            <marker date="1502548947000" expanded="false" signature="5745:5899" ph="..." />
           </folding>
         </state>
       </provider>

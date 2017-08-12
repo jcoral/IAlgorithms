@@ -41,6 +41,27 @@ class Graph:
 
         return es
 
+    @property
+    def __firstEdge__(self):
+        return self.__graphDic__.values()[0].values()[0]
+
+    def getWeight(self, srcv, dstv):
+        """
+        根据起点到终点获取边的权重
+        :param srcv: 起点
+        :param dstv: 终点
+        :return: 权重
+        """
+        if isinstance(srcv, Vertice) and isinstance(dstv, Vertice):
+            srcId = srcv.id
+            dstId = dstv.id
+        else:
+            srcId = srcv
+            dstId = dstv
+        if self.__graphDic__.__contains__(srcId) and self.__graphDic__[srcId].__container__(dstId):
+            return self.__graphDic__[srcId][dstId].weight
+        return None
+
     def addEdge(self, edge):
         """
         添加一条边
@@ -115,12 +136,12 @@ class Graph:
         # 恢复节点的初始状态
         self.__resetVerticesStatus__()
 
-    def DFS(self, v, fn, reverse=True):
+    def DFS(self, v, fn, reverse=True, choiceChildsFN=None):
         """深度优先搜索
 
         :param fn: fn(srcVertice, dstVertice) 对每一个节点所要进行的操作
         :param v: 顶点
-        :param choiceChildFN: (srcVertice, dstVertice) -> Bool 进行深度遍历时选择一个结点进行遍历
+        :param choiceChildsFN: (srcVertice) -> [vertices] 进行深度遍历时选择一个结点进行遍历
         :param reverse: 是否以前进式获取顶点
         """
         vstack = None
@@ -129,7 +150,7 @@ class Graph:
         # 从v开始搜遍历
         ft = [0]
         v.__mark__ = 1
-        ft[0] = self.__BFSTravelRec__(v, fn, vstack)
+        ft[0] = self.__BFSTravel__(v, fn, vstack)
         if not reverse: fn(None, v)
 
         # 在__graphDic__中查找未遍历过的顶点
@@ -147,7 +168,7 @@ class Graph:
                 if notSame:
                     v.deep = ft[0] + 1
                     if reverse: vstack.append((None, v))
-                    ft[0] = self.__BFSTravelRec__(v, fn, vstack)
+                    ft[0] = self.__BFSTravel__(v, fn, vstack, choiceChildsFN)
                     if not reverse: fn(None, v)
 
         self.mapVertices(fn=findVerticeMarkWithZero)
@@ -202,8 +223,25 @@ class Graph:
     def generateSSCGraph(self):
         Gt = self.transpositionGraph()
 
-    def __BFSTravelRec__(self, v, fn, vstack=None):
-        childs = self.mapVertices(id = v.id)
+        def arriveAtV(srcv, dstv):
+            pass
+        self.DFS(self.__firstEdge__.srcVertice, fn=arriveAtV)
+
+    def generateMST(self):
+        """最小生成树"""
+
+        mst = Graph()
+        def treeTheaf(srcv, dstv):
+            mst.addEdge(Edge(srcVertice=srcv, dstVertcie=dstv, weight=self.getWeight(srcv, dstv)))
+
+        self.DFS(self.__firstEdge__.srcVertice, fn=treeTheaf, choiceChildsFN=self.choiceMinWeightVertice)
+        return mst
+
+    def __BFSTravel__(self, v, fn, vstack=None, choiceChildsFN=None):
+        if choiceChildsFN is None:
+            childs = self.mapVertices(id = v.id)
+        else:
+            childs = choiceChildsFN(v)
         if childs is None: childs = []
         deep = v.deep
         ft = deep + 1
@@ -212,7 +250,7 @@ class Graph:
                 child.__mark__ = 1
                 child.deep = ft
                 if vstack is not None: vstack.append((v, child))
-                ft = self.__BFSTravelRec__(child, fn, vstack) + 1
+                ft = self.__BFSTravel__(child, fn, vstack, choiceChildsFN) + 1
                 child.__mark__ = 2
                 if vstack is None: fn(v, child)
 
@@ -301,7 +339,9 @@ class Graph:
         f.close()
         return Graph.generateGraph(graphDic)
 
-
+    def choiceMinWeightVertice(self, srcv):
+        edges = self.mapEdges(id=srcv.id)
+        return min(edges)
 
 
 

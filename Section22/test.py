@@ -48,13 +48,14 @@ def bfs(g):
     g.BFS(g.__graphDic__.values()[0].values()[0].srcVertice, fn)
     print "-" * 45 + "\n"
 
+
 def dfs(g, src, dst):
     print "-" * 20 + " DFS " + "-" * 20
-    g.DFS(g.__graphDic__[src][dst].srcVertice, fn, choiceChildFN=lambda s, d: s.id != "u" or d.id == "v")
+    g.DFS(g.__graphDic__[src][dst].srcVertice, fn)
     print "-" * 45 + "\n"
 
 # bfs(graph)
-# dfs(graph, "a", "b")
+dfs(graph, "a", "b")
 
 
 # print "-" * 14 + " Topological sort " + "-" * 14
@@ -68,13 +69,13 @@ def dfs(g, src, dst):
 #
 # print graph.__graphDic__
 
-# g = graph.transpositionGraph()
-# print "Transposition"
-# dfs(g, "a", "e")
-# dfs(g, "f", "g")
+g = graph.transpositionGraph()
+print "Transposition"
+dfs(g, "e", "b")
+print isinstance(g, Graph)
+# dfs(g, "e", "a")
 
 # print g.__graphDic__
 
-graph.DFS(graph.__graphDic__["a"]["b"].srcVertice, fn)
 
 
