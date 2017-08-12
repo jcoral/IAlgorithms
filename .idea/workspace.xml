@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bda4c53a-17d2-4b28-bcd9-5efa35c6ea07" name="Default" comment="" />
+    <list default="true" id="bda4c53a-17d2-4b28-bcd9-5efa35c6ea07" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section22/Graph.py" afterPath="$PROJECT_DIR$/Section22/Graph.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section22/test.py" afterPath="$PROJECT_DIR$/Section22/test.py" />
+    </list>
     <ignored path="IAlgorithms.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,7 +21,7 @@
     <SUITE FILE_PATH="coverage/IAlgorithms$ActivitySelect_GA.coverage" NAME="ActivitySelect-GA Coverage Results" MODIFIED="1501811980011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
     <SUITE FILE_PATH="coverage/IAlgorithms$LCS.coverage" NAME="LCS Coverage Results" MODIFIED="1501902422735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section15" />
     <SUITE FILE_PATH="coverage/IAlgorithms$Test.coverage" NAME="Test Coverage Results" MODIFIED="1502504900840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IAlgorithms$test.coverage" NAME="test Coverage Results" MODIFIED="1502508652465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section22" />
+    <SUITE FILE_PATH="coverage/IAlgorithms$test.coverage" NAME="test Coverage Results" MODIFIED="1502509307478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section22" />
     <SUITE FILE_PATH="coverage/IAlgorithms$BackpackProblem.coverage" NAME="BackpackProblem Coverage Results" MODIFIED="1501933035333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
     <SUITE FILE_PATH="coverage/IAlgorithms$Activity_DA.coverage" NAME="Activity-DA Coverage Results" MODIFIED="1501813528522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
     <SUITE FILE_PATH="coverage/IAlgorithms$MinSSE.coverage" NAME="MinSSE Coverage Results" MODIFIED="1501851041844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section15" />
@@ -43,26 +46,26 @@
       <file leaf-file-name="Graph.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Section22/Graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+            <state relative-caret-position="167">
+              <caret line="226" column="11" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="11" />
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
                 <element signature="e#197#315#0" expanded="false" />
                 <element signature="e#363#579#0" expanded="false" />
                 <element signature="e#624#749#0" expanded="false" />
                 <element signature="e#1715#2032#0" expanded="false" />
-                <element signature="e#2068#2538#0" expanded="false" />
-                <element signature="e#2594#3796#0" expanded="false" />
-                <element signature="e#3837#4476#0" expanded="false" />
-                <element signature="e#4520#4723#0" expanded="false" />
-                <element signature="e#4842#6054#0" expanded="false" />
-                <element signature="e#6112#6821#0" expanded="false" />
-                <element signature="e#6880#8072#0" expanded="false" />
-                <element signature="e#8121#8253#0" expanded="false" />
-                <element signature="e#8319#8388#0" expanded="false" />
-                <element signature="e#8518#8713#0" expanded="false" />
-                <element signature="e#8770#9420#0" expanded="false" />
-                <element signature="e#9471#9704#0" expanded="false" />
+                <element signature="e#2068#2535#0" expanded="false" />
+                <element signature="e#2591#3793#0" expanded="false" />
+                <element signature="e#3834#4473#0" expanded="false" />
+                <element signature="e#4517#4720#0" expanded="false" />
+                <element signature="e#4839#6051#0" expanded="false" />
+                <element signature="e#6823#8015#0" expanded="false" />
+                <element signature="e#8064#8196#0" expanded="false" />
+                <element signature="e#8262#8331#0" expanded="false" />
+                <element signature="e#8395#8421#0" expanded="false" />
+                <element signature="e#8461#8656#0" expanded="false" />
+                <element signature="e#8713#9363#0" expanded="false" />
+                <element signature="e#9414#9647#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,8 +84,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Section22/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="51" column="104" selection-start-line="51" selection-start-column="104" selection-end-line="51" selection-end-column="104" />
+            <state relative-caret-position="229">
+              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -118,6 +121,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -203,9 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -226,6 +229,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,7 +250,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Graph">
+  <component name="RunManager" selected="Python.test">
     <configuration default="false" name="FractionalKnapsackProblem" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -945,8 +951,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Graph" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Graph" />
         <item index="2" class="java.lang.String" itemvalue="Python.Test" />
         <item index="3" class="java.lang.String" itemvalue="Python.Test (1)" />
         <item index="4" class="java.lang.String" itemvalue="Python.FractionalKnapsackProblem" />
@@ -1007,11 +1013,12 @@
       <workItem from="1502362819305" duration="24155000" />
       <workItem from="1502450045626" duration="2665000" />
       <workItem from="1502502660672" duration="6221000" />
+      <workItem from="1502509151184" duration="242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140785000" />
+    <option name="totallyTimeSpent" value="141027000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,7 +1031,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="896" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1035,9 +1042,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34577113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.108726755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.108726755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1049,6 +1055,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1426,7 +1433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1434,14 +1440,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Section22/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="51" column="104" selection-start-line="51" selection-start-column="104" selection-end-line="51" selection-end-column="104" />
+        <state relative-caret-position="229">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#25#48#0" expanded="true" />
           </folding>
@@ -1450,26 +1455,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Section22/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+        <state relative-caret-position="167">
+          <caret line="226" column="11" selection-start-line="226" selection-start-column="11" selection-end-line="226" selection-end-column="11" />
           <folding>
             <element signature="e#24#51#0" expanded="true" />
             <element signature="e#197#315#0" expanded="false" />
             <element signature="e#363#579#0" expanded="false" />
             <element signature="e#624#749#0" expanded="false" />
             <element signature="e#1715#2032#0" expanded="false" />
-            <element signature="e#2068#2538#0" expanded="false" />
-            <element signature="e#2594#3796#0" expanded="false" />
-            <element signature="e#3837#4476#0" expanded="false" />
-            <element signature="e#4520#4723#0" expanded="false" />
-            <element signature="e#4842#6054#0" expanded="false" />
-            <element signature="e#6112#6821#0" expanded="false" />
-            <element signature="e#6880#8072#0" expanded="false" />
-            <element signature="e#8121#8253#0" expanded="false" />
-            <element signature="e#8319#8388#0" expanded="false" />
-            <element signature="e#8518#8713#0" expanded="false" />
-            <element signature="e#8770#9420#0" expanded="false" />
-            <element signature="e#9471#9704#0" expanded="false" />
+            <element signature="e#2068#2535#0" expanded="false" />
+            <element signature="e#2591#3793#0" expanded="false" />
+            <element signature="e#3834#4473#0" expanded="false" />
+            <element signature="e#4517#4720#0" expanded="false" />
+            <element signature="e#4839#6051#0" expanded="false" />
+            <element signature="e#6823#8015#0" expanded="false" />
+            <element signature="e#8064#8196#0" expanded="false" />
+            <element signature="e#8262#8331#0" expanded="false" />
+            <element signature="e#8395#8421#0" expanded="false" />
+            <element signature="e#8461#8656#0" expanded="false" />
+            <element signature="e#8713#9363#0" expanded="false" />
+            <element signature="e#9414#9647#0" expanded="false" />
           </folding>
         </state>
       </provider>

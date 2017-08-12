@@ -49,7 +49,7 @@ def bfs(g):
     print "-" * 45 + "\n"
 def dfs(g, src, dst):
     print "-" * 20 + " DFS " + "-" * 20
-    g.DFSA(g.__graphDic__[src][dst].srcVertice, fn, choiceChildFN=lambda s, d: s.id != "u" or d.id == "v")
+    g.DFS(g.__graphDic__[src][dst].srcVertice, fn, choiceChildFN=lambda s, d: s.id != "u" or d.id == "v")
     print "-" * 45 + "\n"
 
 bfs(graph)

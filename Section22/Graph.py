@@ -111,7 +111,7 @@ class Graph:
         :param v: 顶点
         """
 
-        self.__travelGraph__(v, fn, 0)
+        self.__travelGraph__(v, fn)
 
         # 恢复节点的初始状态
         self.__resetVerticesStatus__()
@@ -223,29 +223,27 @@ class Graph:
                     fn(lastSrcVertice, lastDstVertice)
                     vl = len(vstack)
 
-    def __travelGraph__(self, v, fn, popIndex):
+    def __travelGraph__(self, v, fn):
         """
         遍历图
         :param v: 起始节点
         :param fn: fn(srcVertice, dstVertice) 对每一个节点所要进行的操作
         :param popIndex: 弹出数字的哪一个索引，n： 第n个， None：最后一个
         """
-        v.__mark__ = 1
-        vqueue = [v]
+        dstv = v
+        dstv.__mark__ = 1
+        vqueue = [(None, dstv)]
 
         while len(vqueue) != 0:
-            if popIndex is None:
-                v = vqueue.pop(len(vqueue) - 1)
-            else:
-                v = vqueue.pop(popIndex)
-            v.__mark__ = 2
-            fn(v)
-            childs = self.mapVertices(id = v.id)
+            srcv, dstv = vqueue.pop(0)
+            dstv.__mark__ = 2
+            fn(srcv, dstv)
+            childs = self.mapVertices(id = dstv.id)
             if childs is None: continue
             for child in childs:
                 if child.__mark__ == 0:
-                    vqueue.append(child)
-                    child.deep = v.deep + 1
+                    vqueue.append((dstv, child))
+                    child.deep = dstv.deep + 1
                 child.__mark__ += 1
 
     def __travelGrapho__(self, v, fn, popIndex):
