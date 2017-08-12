@@ -67,7 +67,6 @@ class Graph:
             vs = set()
             if not self.__graphDic__.__contains__(id): return
             for edge in self.__graphDic__[id].values():
-                vs.add(edge.srcVertice)
                 vs.add(edge.dstVertice)
 
         if fn is not None:
@@ -116,16 +115,22 @@ class Graph:
         # 恢复节点的初始状态
         self.__resetVerticesStatus__()
 
-    def DFS(self, v, fn, choiceChildFN=None):
+    def DFS(self, v, fn, reverse=True):
         """深度优先搜索
 
         :param fn: fn(srcVertice, dstVertice) 对每一个节点所要进行的操作
         :param v: 顶点
         :param choiceChildFN: (srcVertice, dstVertice) -> Bool 进行深度遍历时选择一个结点进行遍历
+        :param reverse: 是否以前进式获取顶点
         """
+        vstack = None
+        if reverse:
+            vstack = [(None, v)]
         # 从v开始搜遍历
         ft = [0]
-        ft[0] = self.__BFSTravel__(v, fn, choiceChildFN=choiceChildFN)
+        v.__mark__ = 1
+        ft[0] = self.__BFSTravelRec__(v, fn, vstack)
+        if not reverse: fn(None, v)
 
         # 在__graphDic__中查找未遍历过的顶点
         # 如果存在自己到自己的顶点， 则先存放到selfToSelfVertices中
@@ -140,7 +145,10 @@ class Graph:
                         selfToSelfVertices.add(v)
                         notSame = False
                 if notSame:
-                    ft[0] = self.__BFSTravel__(v, fn, ft=ft[0], choiceChildFN=choiceChildFN)
+                    v.deep = ft[0] + 1
+                    if reverse: vstack.append((None, v))
+                    ft[0] = self.__BFSTravelRec__(v, fn, vstack)
+                    if not reverse: fn(None, v)
 
         self.mapVertices(fn=findVerticeMarkWithZero)
 
@@ -149,7 +157,12 @@ class Graph:
             if v.__mark__ == 0:
                 ft[0] += 1
                 v._ft = ft[0]
-                fn(None, v)
+                if reverse: vstack.append((None, v))
+                else: fn(None, v)
+
+        if reverse:
+            while len(vstack) != 0:
+                fn(*vstack.pop(0))
 
         # 恢复所有顶点的状态
         self.__resetVerticesStatus__()
@@ -182,46 +195,29 @@ class Graph:
         graph = Graph()
         def swapSrcWithDst(edge):
             graph.addEdge(Edge(edge.dstVertice, edge.srcVertice))
-            # print edge
 
         self.mapEdges(fn=swapSrcWithDst)
         return graph
 
-    def generateSSCs(self):
-        pass
+    def generateSSCGraph(self):
+        Gt = self.transpositionGraph()
 
-    def __BFSTravel__(self, v, fn, ft=None, choiceChildFN = None):
-        dstv = v
-        if ft is not None:
-            dstv.deep = ft + 1
-            ft += 2
-        dstv.__mark__ = 1
-        vstack = [(None, dstv)]
-        while True:
-            srcv, dstv = vstack[len(vstack) - 1]
-            childs = self.mapVertices(id = dstv.id)
-            if childs is None: childs = []
-            for child in childs:
-                if child.__mark__ == 0:
-                    if choiceChildFN is None or (choiceChildFN is not None and choiceChildFN(dstv, child)):
-                        child.deep = dstv.deep + 1
-                        child.__mark__ = 1
-                        vstack.append((dstv, child))
-                        break
-            else:
-                vl = len(vstack)
-                finshedTime = ft
-                if vl != 0 and ft is None: finshedTime = vstack[vl - 1][1].deep
-                while True:
-                    if vl == 0: return finshedTime
-                    lastSrcVertice, lastDstVertice = vstack.pop(vl -1)
+    def __BFSTravelRec__(self, v, fn, vstack=None):
+        childs = self.mapVertices(id = v.id)
+        if childs is None: childs = []
+        deep = v.deep
+        ft = deep + 1
+        for child in childs:
+            if child.__mark__ == 0 and child != v:
+                child.__mark__ = 1
+                child.deep = ft
+                if vstack is not None: vstack.append((v, child))
+                ft = self.__BFSTravelRec__(child, fn, vstack) + 1
+                child.__mark__ = 2
+                if vstack is None: fn(v, child)
 
-                    finshedTime += 1
-                    lastDstVertice._ft = finshedTime
-                    lastDstVertice.__mark__ = 2
-
-                    fn(lastSrcVertice, lastDstVertice)
-                    vl = len(vstack)
+        v._ft = ft
+        return ft
 
     def __travelGraph__(self, v, fn):
         """
@@ -245,40 +241,6 @@ class Graph:
                     vqueue.append((dstv, child))
                     child.deep = dstv.deep + 1
                 child.__mark__ += 1
-
-    def __travelGrapho__(self, v, fn, popIndex):
-        """
-        遍历图
-        :param dstv: 起始节点
-        :param fn: fn(srcVertice, dstVertice) 对每一个节点所要进行的操作
-        :param popIndex: 弹出数字的哪一个索引，n： 第n个， None：最后一个
-        """
-        dstv = v
-        dstv.__mark__ = 1
-        vqueue = [(None, dstv)]
-
-        while len(vqueue) != 0:
-            if popIndex is None:
-                srcv, dstv = vqueue.pop(len(vqueue) - 1)
-            else:
-                srcv, dstv = vqueue.pop(popIndex)
-            dstv.__mark__ = 2
-            fn(srcv, dstv)
-            childs = self.mapVertices(id = dstv.id)
-            if childs is None: continue
-            for child in childs:
-                if child.__mark__ == 1 and popIndex is None:
-                    for index in range(len(vqueue)):
-                        if child == vqueue[index][1]:
-                            src, dst = vqueue.pop(index)
-                            dst.deep = dstv.deep + 1
-                            vqueue.append((dstv, dst))
-                            break
-                else:
-                    if child.__mark__ == 0:
-                        vqueue.append((dstv, child))
-                        child.deep = dstv.deep + 1
-                    child.__mark__ += 1
 
     def __resetVerticesStatus__(self):
         """ 恢复所有结点的状态 """

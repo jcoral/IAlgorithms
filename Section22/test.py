@@ -36,7 +36,7 @@ for i in range(len(_edges) - 1):
 # print len(edges)
 
 # graph = Graph(edges)
-graph = Graph.loadGraph("deepgraph.json")
+graph = Graph.loadGraph("ssc.json")
 # print graph.__graphDic__
 
 def fn(srcv = None, dstv = None):
@@ -47,13 +47,14 @@ def bfs(g):
     print "-" * 20 + " BFS " + "-" * 20
     g.BFS(g.__graphDic__.values()[0].values()[0].srcVertice, fn)
     print "-" * 45 + "\n"
+
 def dfs(g, src, dst):
     print "-" * 20 + " DFS " + "-" * 20
     g.DFS(g.__graphDic__[src][dst].srcVertice, fn, choiceChildFN=lambda s, d: s.id != "u" or d.id == "v")
     print "-" * 45 + "\n"
 
-bfs(graph)
-dfs(graph, "u", "v")
+# bfs(graph)
+# dfs(graph, "a", "b")
 
 
 # print "-" * 14 + " Topological sort " + "-" * 14
@@ -69,11 +70,11 @@ dfs(graph, "u", "v")
 
 # g = graph.transpositionGraph()
 # print "Transposition"
-# dfs(g, "b", "a")
+# dfs(g, "a", "e")
+# dfs(g, "f", "g")
 
 # print g.__graphDic__
 
-#
-# print ""
+graph.DFS(graph.__graphDic__["a"]["b"].srcVertice, fn)
 
 

@@ -43,16 +43,16 @@ import numpy as np
 d = [1, 2]
 # d.insert(d.index(2) + 1, 3)
 # print d.index(4)
-for i in d:
-    if i == 2:
-        break
-else:
-    print "break"
+# for i in d:
+#     if i == 2:
+#         break
+# else:
+#     print "break"
 
 
 
 
-
+print range(0).reverse()
 
 
 
