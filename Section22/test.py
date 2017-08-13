@@ -36,7 +36,7 @@ for i in range(len(_edges) - 1):
 # print len(edges)
 
 # graph = Graph(edges)
-graph = Graph.loadGraph("ssc.json")
+graph = Graph.loadGraph("g23_1.json")
 # print graph.__graphDic__
 
 def fn(srcv = None, dstv = None):
@@ -53,11 +53,11 @@ def dfs(g, src, dst):
     print "-" * 20 + " DFS " + "-" * 20
     g.DFS(g.__graphDic__[src][dst].srcVertice, fn)
     print "-" * 45 + "\n"
-
+# 搜索
 # bfs(graph)
-dfs(graph, "a", "b")
+# dfs(graph, "a", "b")
 
-
+# 拓扑排序
 # print "-" * 14 + " Topological sort " + "-" * 14
 # A = graph.topologicalSort()
 # for a in A:
@@ -69,13 +69,48 @@ dfs(graph, "a", "b")
 #
 # print graph.__graphDic__
 
-g = graph.transpositionGraph()
-print "Transposition"
-dfs(g, "e", "b")
-print isinstance(g, Graph)
+# 强连通图
+# g = graph.transpositionGraph()
+# print "Transposition"
+# dfs(g, "e", "b")
+# print isinstance(g, Graph)
 # dfs(g, "e", "a")
 
 # print g.__graphDic__
+
+# 最短路径
+# f = graph.__graphDic__["s"]["t"].srcVertice
+# spg = graph.BellmanFord(f)
+# spg.BFS(v=f,fn=fn)
+
+# d = graph.Dijkstra(f)
+# d.BFS(v=f, fn=fn)
+
+# 最小生成树
+mst = graph.Prim()
+print mst.__graphDic__
+dfs(mst, "a", "b")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

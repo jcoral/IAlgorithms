@@ -49,13 +49,21 @@ d = [1, 2]
 # else:
 #     print "break"
 
+# from copy import deepcopy
+# from Section22.Vertice import Vertice
+# v = Vertice(1)
+# print v.deep
+# v.minWeight = 123
+#
+# vv = v
+# v1 = deepcopy(vv)
+# v1.minWeight = 222
+# print v.minWeight
+# # print range(0).reverse()
 
-
-
-print range(0).reverse()
-
-
-
+a = {"a": {"b": 1}}
+del a["a"]["b"]
+print a
 
 
 

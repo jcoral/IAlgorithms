@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from Vertice import Vertice
 from Edge import Edge
+from copy import deepcopy
 
 """
 图
@@ -14,6 +15,9 @@ from Edge import Edge
 """
 
 class Graph:
+
+    verticeConnctionChar = "->"
+    weightAndEdgeConnectionChar = ":"
 
     def __init__(self, edges = None):
         self.__graphDic__ = {}
@@ -45,12 +49,12 @@ class Graph:
     def __firstEdge__(self):
         return self.__graphDic__.values()[0].values()[0]
 
-    def getWeight(self, srcv, dstv):
+    def getEdge(self, srcv, dstv):
         """
         根据起点到终点获取边的权重
         :param srcv: 起点
         :param dstv: 终点
-        :return: 权重
+        :return: srcv到dstv的边
         """
         if isinstance(srcv, Vertice) and isinstance(dstv, Vertice):
             srcId = srcv.id
@@ -58,9 +62,18 @@ class Graph:
         else:
             srcId = srcv
             dstId = dstv
-        if self.__graphDic__.__contains__(srcId) and self.__graphDic__[srcId].__container__(dstId):
-            return self.__graphDic__[srcId][dstId].weight
+        if self.__graphDic__.__contains__(srcId) and self.__graphDic__[srcId].__contains__(dstId):
+            return self.__graphDic__[srcId][dstId]
         return None
+
+    def getWeight(self, srcv, dstv):
+        """
+        根据起点到终点获取边的权重
+        :param srcv: 起点
+        :param dstv: 终点
+        :return: 权重
+        """
+        return self.getEdge(srcv, dstv)
 
     def addEdge(self, edge):
         """
@@ -75,11 +88,20 @@ class Graph:
 
         self.__graphDic__[srcID][dstID] = edge
 
-    def mapVertices(self, id = None, fn = None):
+    def removeEdge(self, edge):
+        del self.__graphDic__[edge.srcVertice.id][edge.dstVertice.id]
+
+    def removeEdge(self, srcv, dstv):
+        e = self.getEdge(srcv, dstv)
+        if e is not None:
+            self.removeEdge(e)
+
+    def mapVertices(self, id = None, fn = None, filterFN = None):
         """
         遍历节点
         :param id: None: 所有的节点, id: 与id节点相连所有结点
         :param fn: fn(vertice) 对每一个节点所要进行的操作
+        :param filterFN: (vertice) -> Bool 过滤结点
         :return: 返回所有的节点
         """
         if id is None:
@@ -90,25 +112,37 @@ class Graph:
             for edge in self.__graphDic__[id].values():
                 vs.add(edge.dstVertice)
 
-        if fn is not None:
-            for v in vs:
-                fn(v)
+        i = 0
+        vs = list(vs)
+        while i < len(vs):
+            if filterFN is None or (filterFN is not None and filterFN(vs[i])):
+                if fn is not None:
+                    fn(vs[i])
+                i += 1
+            else:
+                vs.pop(i)
 
         return vs
 
-    def mapEdges(self, id = None, fn = None):
+    def mapEdges(self, id = None, fn = None, filterFN = None):
         """
         遍历边
         :param id: None：所有的边，id：与id节点相连的边
         :param fn: fn(edge) 对每一个边所要进行的操作
+        :param filterFN: (edge) -> Bool 过滤边
         :return: 返回所有的边
         """
         if id is None: es = self.edges
         else: es = self.__graphDic__[id].values()
 
-        if fn is not None:
-            for e in es:
-                fn(e)
+        i = 0
+        while i < len(es):
+            if filterFN is None or (filterFN is not None and filterFN(es[i])):
+                if fn is not None:
+                    fn(es[i])
+                i += 1
+            else:
+                es.pop(i)
 
         return es
 
@@ -131,7 +165,7 @@ class Graph:
         :param v: 顶点
         """
 
-        self.__travelGraph__(v, fn)
+        self.__BFSTravel__(v, fn)
 
         # 恢复节点的初始状态
         self.__resetVerticesStatus__()
@@ -150,7 +184,7 @@ class Graph:
         # 从v开始搜遍历
         ft = [0]
         v.__mark__ = 1
-        ft[0] = self.__BFSTravel__(v, fn, vstack)
+        ft[0] = self.__DFSTravel__(v, fn, vstack, choiceChildsFN=choiceChildsFN)
         if not reverse: fn(None, v)
 
         # 在__graphDic__中查找未遍历过的顶点
@@ -168,7 +202,7 @@ class Graph:
                 if notSame:
                     v.deep = ft[0] + 1
                     if reverse: vstack.append((None, v))
-                    ft[0] = self.__BFSTravel__(v, fn, vstack, choiceChildsFN)
+                    ft[0] = self.__DFSTravel__(v, fn, vstack, choiceChildsFN)
                     if not reverse: fn(None, v)
 
         self.mapVertices(fn=findVerticeMarkWithZero)
@@ -220,6 +254,20 @@ class Graph:
         self.mapEdges(fn=swapSrcWithDst)
         return graph
 
+    def BellmanFord(self, s):
+        """
+        一般情况下用于求单源最短路径问题
+        :return: 最短路径
+        """
+        return self.__GLP__(s, choiceIndexFN=lambda q: 0)
+
+    def Dijkstra(self, s):
+        """
+        带权重的有向图单源最短路径问题(权重非负)
+        :return: 最短路径
+        """
+        return self.__GLP__(s, choiceIndexFN=lambda vqueue: vqueue.index(min(vqueue)))
+
     def generateSSCGraph(self):
         Gt = self.transpositionGraph()
 
@@ -227,17 +275,66 @@ class Graph:
             pass
         self.DFS(self.__firstEdge__.srcVertice, fn=arriveAtV)
 
-    def generateMST(self):
+    def Prim(self):
         """最小生成树"""
 
         mst = Graph()
         def treeTheaf(srcv, dstv):
-            mst.addEdge(Edge(srcVertice=srcv, dstVertcie=dstv, weight=self.getWeight(srcv, dstv)))
+            # print srcv, dstv
+            if srcv is None: return
+            mst.addEdge(self.getEdge(srcv, dstv))
 
         self.DFS(self.__firstEdge__.srcVertice, fn=treeTheaf, choiceChildsFN=self.choiceMinWeightVertice)
-        return mst
+        return deepcopy(mst)
 
-    def __BFSTravel__(self, v, fn, vstack=None, choiceChildsFN=None):
+    def __relax__(self, edge, vqueue):
+        srcv = edge.srcVertice
+        dstv = edge.dstVertice
+
+        sdWeight = srcv.__minWeight__ + edge.weight
+        if dstv.__minWeight__ is None or dstv.__minWeight__ > sdWeight:
+            dstv.__minWeight__ = sdWeight
+            dstv.__minFrontVertice__ = srcv
+
+            if sdWeight > 0 and not vqueue.__contains__(dstv):
+                vqueue.append(dstv)
+
+    def __GLP__(self, s, choiceIndexFN):
+        """
+        生成最短路径
+
+        初始化队列vqueue，初始值为s
+        循环取队列的值作为srcv，直到队列为空
+            获取srcv所有指向的边
+            遍历srcv所有指向的边
+                如果边终点的权值大于srcv的权值加上边的权值
+                    修改终点的权值
+                    将终点所有指向边的顶点添加到队列中
+        结束循环
+
+        :param s:
+        :param choiceIndexFN:
+        :return:
+        """
+        s.__minWeight__ = 0
+        vqueue = [s]
+        while len(vqueue) != 0:
+            srcv = vqueue.pop(choiceIndexFN(vqueue))
+            edges = self.mapEdges(id=srcv.id)
+            for edge in edges:
+                self.__relax__(edge, vqueue)
+                if vqueue.__contains__(s):
+                    vqueue.remove(s)
+
+        shortestPath = Graph()
+        def addEdge(v):
+            edge = self.getEdge(v.__minFrontVertice__, v)
+            shortestPath.addEdge(edge)
+
+        self.mapVertices(fn=addEdge, filterFN=lambda v: v != s)
+        return deepcopy(shortestPath)
+
+    def __DFSTravel__(self, v, fn, vstack=None, choiceChildsFN=None):
         if choiceChildsFN is None:
             childs = self.mapVertices(id = v.id)
         else:
@@ -250,14 +347,14 @@ class Graph:
                 child.__mark__ = 1
                 child.deep = ft
                 if vstack is not None: vstack.append((v, child))
-                ft = self.__BFSTravel__(child, fn, vstack, choiceChildsFN) + 1
+                ft = self.__DFSTravel__(child, fn, vstack, choiceChildsFN) + 1
                 child.__mark__ = 2
                 if vstack is None: fn(v, child)
 
         v._ft = ft
         return ft
 
-    def __travelGraph__(self, v, fn):
+    def __BFSTravel__(self, v, fn):
         """
         遍历图
         :param v: 起始节点
@@ -289,11 +386,24 @@ class Graph:
 
     @staticmethod
     def __transfromEdgeToStr__(edge):
-        return str(edge.srcVertice.value) + "->" + str(edge.dstVertice.value)
+        return str(edge.weight) + Graph.weightAndEdgeConnectionChar + \
+               str(edge.srcVertice.value) + Graph.verticeConnctionChar + \
+               str(edge.dstVertice.value)
 
     @staticmethod
     def __transfromEdge__(edgeStr):
-        return edgeStr.split("->")
+        """
+        :param edgeStr: srcv_value->dstv_value or weight:srcv_value->dstv_value
+        :return: 带权重 (srcv_value, dstv_value, weight)
+        """
+        if edgeStr.__contains__(Graph.weightAndEdgeConnectionChar):
+            weightAndEdges = edgeStr.split(Graph.weightAndEdgeConnectionChar)
+            vs = weightAndEdges[1].split(Graph.verticeConnctionChar)
+            vs.append(float(weightAndEdges[0]))
+        else:
+            vs = edgeStr.split("->")
+            vs.append(1)
+        return vs
 
     def storeGraph(self, fp):
         """
@@ -316,13 +426,13 @@ class Graph:
         vDic = {}
         for srcId, dstDic in zip(gDic.keys(), gDic.values()):
             for dstId, srcToDstValue in zip(dstDic.keys(), dstDic.values()):
-                srcValue, dstValue = Graph.__transfromEdge__(srcToDstValue)
+                srcValue, dstValue, weight = Graph.__transfromEdge__(srcToDstValue)
                 srcVertice = vDic.get(srcId, Vertice(srcValue, id = srcId))
                 vDic[srcId] = srcVertice
                 dstVertice = vDic.get(dstId, Vertice(dstValue, id = dstId))
                 vDic[dstId] = dstVertice
 
-                graph.addEdge(Edge(srcVertice, dstVertice))
+                graph.addEdge(Edge(srcVertice, dstVertice, weight=weight))
 
         return graph
 
@@ -340,8 +450,14 @@ class Graph:
         return Graph.generateGraph(graphDic)
 
     def choiceMinWeightVertice(self, srcv):
-        edges = self.mapEdges(id=srcv.id)
-        return min(edges)
+        edges = self.mapEdges(id=srcv.id, filterFN=lambda e: e.__mark__ == 0)
+        if len(edges) == 0: return []
+        minWeightEdge = min(edges)
+        minWeightEdge.__mark__ = 1
+        reverseEdge = self.getEdge(minWeightEdge.dstVertice, minWeightEdge.srcVertice)
+        if reverseEdge is not None:
+            reverseEdge.__mark__ = 1
+        return [minWeightEdge.dstVertice]
 
 
 

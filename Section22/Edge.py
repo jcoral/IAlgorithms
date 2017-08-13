@@ -6,6 +6,7 @@ class Edge:
         self.srcVertice = srcVertice
         self.dstVertice = dstVertcie
         self.weight  = weight
+        self.__mark__ = 0
 
     def __cmp__(self, other):
         return self.weight - other.weight
@@ -13,7 +14,8 @@ class Edge:
     def __str__(self):
         return "SRC: " + str(self.srcVertice.id) + \
                " DST: " + str(self.dstVertice.id) + \
-               " Weight: " + str(self.weight)
+               " Weight: " + str(self.weight) + \
+               " Mark: " + str(self.__mark__)
 
 
 
