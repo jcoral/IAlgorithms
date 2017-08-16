@@ -44,7 +44,7 @@ class Vertice:
         sys.setdefaultencoding('utf-8')
         return "Value: " + str(self.value) + \
                " ID: " + str(self.id) + \
-               " minWeight: " + str(self.__minWeight__)
+               " Mark: " + str(self.__mark__)
 
 
 

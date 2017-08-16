@@ -87,7 +87,7 @@ def dfs(g, src, dst):
 # d.BFS(v=f, fn=fn)
 
 # 最小生成树
-mst = graph.Prim()
+mst = graph.Kruskakl()
 print mst.__graphDic__
 dfs(mst, "a", "b")
 

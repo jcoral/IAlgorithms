@@ -96,6 +96,11 @@ class Graph:
         if e is not None:
             self.removeEdge(e)
 
+    def unionGraph(self, graph):
+        def unionEdge(edge):
+            self.addEdge(edge)
+        graph.mapEdges(fn=unionEdge)
+
     def mapVertices(self, id = None, fn = None, filterFN = None):
         """
         遍历节点
@@ -124,7 +129,7 @@ class Graph:
 
         return vs
 
-    def mapEdges(self, id = None, fn = None, filterFN = None):
+    def mapEdges(self, id = None, fn = None, filterFN = None, needSorted=False):
         """
         遍历边
         :param id: None：所有的边，id：与id节点相连的边
@@ -136,6 +141,8 @@ class Graph:
         else: es = self.__graphDic__[id].values()
 
         i = 0
+        if needSorted:
+            es.sort()
         while i < len(es):
             if filterFN is None or (filterFN is not None and filterFN(es[i])):
                 if fn is not None:
@@ -276,16 +283,109 @@ class Graph:
         self.DFS(self.__firstEdge__.srcVertice, fn=arriveAtV)
 
     def Prim(self):
-        """最小生成树"""
+        """最小生成树
+
+        思想：
+        初始化最小生成树
+        初始化数组vqueue， 初始值为随机一个顶点指向的所有边
+        循环获取数组的内容， 数组为空
+            在数组中弹出边权重最小的边
+            设置边两端的顶点为已经走过， 并且是双向的
+            在最小生成树中添加该条边以及该边的反向边
+            将改边的终点所指向的边添加到队列中，且边的终点没有走过
+        结束循环
+        重置图的状态
+
+        :return 最小生成树
+        """
 
         mst = Graph()
-        def treeTheaf(srcv, dstv):
-            # print srcv, dstv
-            if srcv is None: return
-            mst.addEdge(self.getEdge(srcv, dstv))
+        def edgePass(edge, m1, m2 = None):
+            if m2 is None:
+                m2 = m1
+            return edge.srcVertice.__mark__ == m1 and edge.dstVertice.__mark__ == m2
 
-        self.DFS(self.__firstEdge__.srcVertice, fn=treeTheaf, choiceChildsFN=self.choiceMinWeightVertice)
+        def setEdgeMark(edge, m1, m2 = None):
+            if m2 is None:
+                m2 = m1
+            edge.srcVertice.__mark__ = m1
+            edge.dstVertice.__mark__ = m2
+
+        def initEdge(edge):
+            edge.__mark__ = 1
+        vqueue = self.mapEdges(id=self.__firstEdge__.srcVertice.id, fn=initEdge)
+
+        while len(vqueue) != 0:
+            edge = vqueue.pop(vqueue.index(min(vqueue)))
+            if edgePass(edge, 2):
+                continue
+            setEdgeMark(edge, 2)
+            setEdgeMark(self.getEdge(edge.dstVertice, edge.srcVertice), 2)
+
+            mst.addEdge(edge)
+            mst.addEdge(self.getEdge(edge.dstVertice, edge.srcVertice))
+            edges = self.mapEdges(id = edge.dstVertice.id)
+            if edges is None: continue
+            for child in edges:
+                isPass = child.dstVertice.__mark__ == 0
+                if isPass:
+                    vqueue.append(child)
+        self.__resetVerticesStatus__()
         return deepcopy(mst)
+
+    def Kruskakl(self):
+        """最小生成树"""
+        treeSet = []
+
+        def findVertice(u, v):
+            uvPosition = [None, None]
+
+            for tree in treeSet:
+                result = tree.mapVertices(filterFN=lambda v0: v0 == v or v0 == u)
+                resultLength = len(result)
+                if resultLength == 1:
+                    if u == result[0]:
+                        uvPosition[0] = tree
+                    else:
+                        uvPosition[1] = tree
+                elif resultLength == 2:
+                    if u == result[0] or u == result[1]:
+                        uvPosition[0] = tree
+                    else:
+                        uvPosition[1] = tree
+
+                if uvPosition[0] is not None and uvPosition[1] is not None: return
+
+            return uvPosition
+
+        def generateTree(edge):
+            g = Graph()
+            g.addEdge(edge)
+            treeSet.append(g)
+
+        def addMSTEdge(edge):
+            srct, dstt = findVertice(edge.srcVertice, edge.dstVertice)
+            targetTree = None
+            if srct is None and dstt is None:
+                generateTree(edge)
+                return
+            if srct is None and dstt is not None:
+                targetTree = dstt
+            if srct is not None and dstt is None:
+                targetTree = srct
+            if srct != dstt and srct is not None and dstt is not None:
+                srct.unionGraph(dstt)
+                treeSet.remove(dstt)
+                targetTree = srct
+                dstt = None
+
+            if targetTree is not None:
+                targetTree.addEdge(edge)
+                targetTree.addEdge(self.getEdge(edge.dstVertice, edge.srcVertice))
+
+        self.mapEdges(fn=addMSTEdge, needSorted=True)
+        self.__resetVerticesStatus__()
+        return deepcopy(treeSet[0])
 
     def __relax__(self, edge, vqueue):
         srcv = edge.srcVertice
