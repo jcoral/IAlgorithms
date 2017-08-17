@@ -25,15 +25,40 @@ class BTree(Tree):
 
         return max(left, right)
 
-    def findParent(self, node):
-        parent = self.header
-        while True:
-            if parent is None or parent.isParent(node): break
-            elif  parent.value <= node.value: parent = parent.left
-            else: parent = parent.right
-            # if parent is None: break
-        return parent
+    def findMinLeafNode(self):
+        if self.header is None:
+            return None
+        else:
+            return self.header.findMinLeafNode()
 
+    def findMaxLeafNode(self):
+        if self.header is None:
+            return None
+        else:
+            return self.header.findMaxLeafNode()
+
+    def findParent(self, node, usePosition=False):
+        """
+        查找结点的父节点
+        :param usePosition: 是否返回孩子的位置， 0：左孩子， 1：右孩子
+        :return: usePostion true: (parent, position) false: parent
+        """
+        parent = self.header
+        pos = None
+        while True:
+            if usePosition:
+                _ip, pos = parent.isParent(node, True)
+            else:
+                _ip = parent.isParent(node)
+            if parent is None or _ip: break
+            elif  parent.value <= node.value:
+                parent = parent.left
+            else:
+                parent = parent.right
+        if usePosition:
+            return (parent, pos)
+        else:
+            return parent
 
     def preorderWalk(self, startNode = None, fn = None):
         if startNode is None:

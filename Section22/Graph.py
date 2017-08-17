@@ -454,8 +454,8 @@ class Graph:
                     将终点所有指向边的顶点添加到队列中
         结束循环
 
-        :param s:
-        :param choiceIndexFN:
+        :param s: 源点
+        :param choiceIndexFN: 弹出队列的哪一个
         :return:
         """
         s.__minWeight__ = 0
@@ -526,13 +526,13 @@ class Graph:
 
         self.mapVertices(fn=resetVerticeFN)
 
-    @staticmethod
+    @classmethod
     def __transfromEdgeToStr__(edge):
         return str(edge.weight) + Graph.weightAndEdgeConnectionChar + \
                str(edge.srcVertice.value) + Graph.verticeConnctionChar + \
                str(edge.dstVertice.value)
 
-    @staticmethod
+    @classmethod
     def __transfromEdge__(edgeStr):
         """
         :param edgeStr: srcv_value->dstv_value or weight:srcv_value->dstv_value
@@ -557,7 +557,7 @@ class Graph:
         json.dump(self.__graphDic__, f, default=Graph.__transfromEdgeToStr__)
         f.close()
 
-    @staticmethod
+    @classmethod
     def generateGraph(gDic):
         """
         根据图字典生成图
@@ -578,7 +578,7 @@ class Graph:
 
         return graph
 
-    @staticmethod
+    @classmethod
     def loadGraph(fp):
         """
         根据文件路径的内容生成图

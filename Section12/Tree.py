@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from Section12.Node import Node
-
+from abc import abstractmethod
 
 class Tree:
 
@@ -11,11 +11,11 @@ class Tree:
     def isEmpty(self):
         return self.header is None
 
-    def addChild(self, v):
-        pass
+    @abstractmethod
+    def addChild(self, v): pass
 
-    def removeNode(self, node):
-        pass
+    @abstractmethod
+    def removeNode(self, node): pass
 
     def preorderWalk(self, startNode = None, fn = None):
         """

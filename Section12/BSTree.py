@@ -40,9 +40,32 @@ class BSTree(BTree):
                     curNode = curNode.right
 
     def removeNode(self, node):
-        # 找到父节点
-        parent = self.findParent(node)
-        # TODO
+        """
+        删除节点
+
+        # 判断节点是不是父节点
+        # 如果是父节点，则改变树的头结点指向头节点的右孩子
+        # 如果不是则找到node的父节点，并将父节点的孩子指向node的右孩子
+        # 最后将node的左孩子连接到node右孩子的最小节点上
+
+        :param node: 要删除的节点
+        """
+
+        if node == self.header:
+            rightNode = node.right
+            self.header = node.right
+        else:
+            parent, pos = self.findParent(node, usePosition=True)
+
+            rightNode = node.right
+            if pos == 0:
+                parent.left = rightNode
+            else:
+                parent.right = rightNode
+
+        if rightNode is not None:
+            minNode = rightNode.findMinLeafNode()
+            minNode.left = node.left
 
     def find(self, v):
         """

@@ -61,12 +61,12 @@ d = [1, 2]
 # print v.minWeight
 # # print range(0).reverse()
 
-a = {"a": {"b": 1}}
-del a["a"]["b"]
-print a
+# a = {"a": {"b": 1}}
+# del a["a"]["b"]
+# print a
 
 
-
+print np.floor(-0.1)
 
 
 
