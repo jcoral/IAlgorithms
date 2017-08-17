@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import math
+
 class Edge:
 
     def __init__(self, srcVertice, dstVertcie, weight = 1):
@@ -9,7 +11,11 @@ class Edge:
         self.__mark__ = 0
 
     def __cmp__(self, other):
-        return self.weight - other.weight
+        dif = self.weight - other.weight
+        if dif < 0:
+            return int(math.floor(dif))
+        else:
+            return int(math.ceil(dif))
 
     def __str__(self):
         return "SRC: " + str(self.srcVertice.id) + \
