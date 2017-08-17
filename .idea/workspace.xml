@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda4c53a-17d2-4b28-bcd9-5efa35c6ea07" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Section12/HuffmanTree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section12/BSTree.py" afterPath="$PROJECT_DIR$/Section12/BSTree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section12/BTree.py" afterPath="$PROJECT_DIR$/Section12/BTree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section12/Node.py" afterPath="$PROJECT_DIR$/Section12/Node.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section12/Test.py" afterPath="$PROJECT_DIR$/Section12/Test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section12/Tree.py" afterPath="$PROJECT_DIR$/Section12/Tree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section22/Edge.py" afterPath="$PROJECT_DIR$/Section22/Edge.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section22/Graph.py" afterPath="$PROJECT_DIR$/Section22/Graph.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test.py" afterPath="$PROJECT_DIR$/Test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section3/MSA.py" afterPath="$PROJECT_DIR$/Section3/MSA.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Section3/MaxSubArr.py" afterPath="$PROJECT_DIR$/Section3/MaxSubArr.py" />
     </list>
     <ignored path="IAlgorithms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,6 +18,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/IAlgorithms$Test__1_.coverage" NAME="Test (1) Coverage Results" MODIFIED="1502953173281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section12" />
+    <SUITE FILE_PATH="coverage/IAlgorithms$MSA.coverage" NAME="MSA Coverage Results" MODIFIED="1502953717502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section3" />
     <SUITE FILE_PATH="coverage/IAlgorithms$ActivitySelect_GA.coverage" NAME="ActivitySelect-GA Coverage Results" MODIFIED="1501811980011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section16" />
     <SUITE FILE_PATH="coverage/IAlgorithms$LCS.coverage" NAME="LCS Coverage Results" MODIFIED="1501902422735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section15" />
     <SUITE FILE_PATH="coverage/IAlgorithms$test.coverage" NAME="test Coverage Results" MODIFIED="1502873074133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Section22" />
@@ -51,43 +44,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Section12/Test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Section12/Node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="46" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Edge.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Section22/Edge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="147">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HuffmanTree.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Section12/HuffmanTree.py">
+      <file leaf-file-name="Graph.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Section22/Graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="356">
+              <caret line="580" column="16" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
               <folding>
-                <element signature="e#25#48#0" expanded="true" />
+                <element signature="e#24#51#0" expanded="true" />
+                <element signature="e#101#161#1" expanded="false" />
+                <element signature="e#294#412#0" expanded="false" />
+                <element signature="e#460#676#0" expanded="false" />
+                <element signature="e#721#846#0" expanded="false" />
+                <element signature="e#899#947#0" expanded="false" />
+                <element signature="e#992#1464#0" expanded="false" />
+                <element signature="e#1511#1656#0" expanded="false" />
+                <element signature="e#1695#1978#0" expanded="false" />
+                <element signature="e#2020#2081#0" expanded="false" />
+                <element signature="e#2129#2214#0" expanded="false" />
+                <element signature="e#2257#2345#0" expanded="false" />
+                <element signature="e#2389#2461#0" expanded="false" />
+                <element signature="e#2537#3274#0" expanded="false" />
+                <element signature="e#3385#4415#0" expanded="false" />
+                <element signature="e#4451#4916#0" expanded="false" />
+                <element signature="e#4987#6643#0" expanded="false" />
+                <element signature="e#6684#7323#0" expanded="false" />
+                <element signature="e#7367#7545#0" expanded="false" />
+                <element signature="e#7585#7705#0" expanded="false" />
+                <element signature="e#7742#7896#0" expanded="false" />
+                <element signature="e#7938#8083#0" expanded="false" />
+                <element signature="e#8113#9615#0" expanded="false" />
+                <element signature="e#8488#8611#0" expanded="false" />
+                <element signature="e#8671#8793#0" expanded="false" />
+                <element signature="e#8835#8852#0" expanded="false" />
+                <element signature="e#9649#11993#0" expanded="false" />
+                <element signature="e#9915#10743#0" expanded="false" />
+                <element signature="e#10789#10928#0" expanded="false" />
+                <element signature="e#10972#11844#0" expanded="false" />
+                <element signature="e#12042#12406#0" expanded="false" />
+                <element signature="e#12457#13382#0" expanded="false" />
+                <element signature="e#13462#14085#0" expanded="false" />
+                <element signature="e#14131#14796#0" expanded="false" />
+                <element signature="e#14845#14977#0" expanded="false" />
+                <element signature="e#15042#15222#0" expanded="false" />
+                <element signature="e#15285#15791#0" expanded="false" />
+                <element signature="e#15831#16026#0" expanded="false" />
+                <element signature="e#16082#16755#0" expanded="false" />
+                <element signature="e#16805#17038#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -113,9 +125,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Section3/MSA.py" />
         <option value="$PROJECT_DIR$/Section3/Test.py" />
-        <option value="$PROJECT_DIR$/Section3/MaxSubArr.py" />
         <option value="$PROJECT_DIR$/Section3/merge.py" />
         <option value="$PROJECT_DIR$/Section16/ActivitySelector.py" />
         <option value="$PROJECT_DIR$/Section16/ActivitySelect-GA.py" />
@@ -150,6 +160,8 @@
         <option value="$PROJECT_DIR$/Section12/Node.py" />
         <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/Section22/Edge.py" />
+        <option value="$PROJECT_DIR$/Section3/MSA.py" />
+        <option value="$PROJECT_DIR$/Section3/MaxSubArr.py" />
       </list>
     </option>
   </component>
@@ -213,20 +225,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IAlgorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IAlgorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Section22" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -250,25 +248,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Test">
-    <configuration default="false" name="FractionalKnapsackProblem" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Section16" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="IAlgorithms" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Section16/FractionalKnapsackProblem.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.MSA">
     <configuration default="false" name="Test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -337,6 +317,24 @@
       <module name="IAlgorithms" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Section22/Graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MSA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Section3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IAlgorithms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Section3/MSA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -943,19 +941,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.FractionalKnapsackProblem" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Test (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Graph" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Test (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Graph" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MSA" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Test (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Graph" />
-        <item index="4" class="java.lang.String" itemvalue="Python.FractionalKnapsackProblem" />
+        <item index="0" class="java.lang.String" itemvalue="Python.MSA" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Test (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Graph" />
       </list>
     </recent_temporary>
   </component>
@@ -1018,12 +1016,12 @@
       <workItem from="1502590708215" duration="20064000" />
       <workItem from="1502848783538" duration="13852000" />
       <workItem from="1502938062123" duration="2249000" />
-      <workItem from="1502950907376" duration="2583000" />
+      <workItem from="1502950907376" duration="3079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195389000" />
+    <option name="totallyTimeSpent" value="195885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1092,13 +1090,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Section3/merge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Section3/MaxSubArr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1302">
@@ -1117,13 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section3/MSA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1169,73 +1153,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section3/MaxSubArr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-335">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="818">
           <caret line="3141" column="13" selection-start-line="3141" selection-start-column="13" selection-end-line="3141" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section15/SplitProblem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section16/ActivitySelect-GA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="36" selection-start-line="6" selection-start-column="0" selection-end-line="21" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section16/Activity-DA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section15/Matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section15/MinSSE.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section15/LCS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section16/KnapsackProblem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section16/FractionalKnapsackProblem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1325,20 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section3/merge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Section10/LinkList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-330">
@@ -1384,31 +1291,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section22/Graph.py">
+    <entry file="file://$PROJECT_DIR$/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="580" column="16" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
+        <state relative-caret-position="377">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section12/Tree.py">
+    <entry file="file://$PROJECT_DIR$/Section3/MaxSubArr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#55#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-294">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section12/BTree.py">
+    <entry file="file://$PROJECT_DIR$/Section3/merge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#143#162#0" expanded="false" />
-            <element signature="e#909#1553#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-526">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section3/MSA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-756">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section10/LinkList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1425,52 +1344,184 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test.py">
+    <entry file="file://$PROJECT_DIR$/Section12/BTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="-3213">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#143#162#0" expanded="false" />
+            <element signature="e#909#1553#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section12/HuffmanTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#25#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section12/Node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section12/Tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-316">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Section12/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="503">
           <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section12/Node.py">
+    <entry file="file://$PROJECT_DIR$/Section15/LCS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="46" selection-end-column="38" />
+        <state relative-caret-position="-589">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section22/Vertice.py">
+    <entry file="file://$PROJECT_DIR$/Section15/Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1030">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section15/MinSSE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1134">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section15/SplitProblem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1135">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section16/Activity-DA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section16/ActivitySelect-GA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="36" selection-start-line="6" selection-start-column="0" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section16/FractionalKnapsackProblem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <caret line="24" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section16/KnapsackProblem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="24" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section22/fp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Section22/Edge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="147">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Section12/HuffmanTree.py">
+    <entry file="file://$PROJECT_DIR$/Section22/Vertice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="651">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Section22/Graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="580" column="16" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
           <folding>
-            <element signature="e#25#48#0" expanded="true" />
+            <element signature="e#24#51#0" expanded="true" />
+            <element signature="e#101#161#1" expanded="false" />
+            <element signature="e#294#412#0" expanded="false" />
+            <element signature="e#460#676#0" expanded="false" />
+            <element signature="e#721#846#0" expanded="false" />
+            <element signature="e#899#947#0" expanded="false" />
+            <element signature="e#992#1464#0" expanded="false" />
+            <element signature="e#1511#1656#0" expanded="false" />
+            <element signature="e#1695#1978#0" expanded="false" />
+            <element signature="e#2020#2081#0" expanded="false" />
+            <element signature="e#2129#2214#0" expanded="false" />
+            <element signature="e#2257#2345#0" expanded="false" />
+            <element signature="e#2389#2461#0" expanded="false" />
+            <element signature="e#2537#3274#0" expanded="false" />
+            <element signature="e#3385#4415#0" expanded="false" />
+            <element signature="e#4451#4916#0" expanded="false" />
+            <element signature="e#4987#6643#0" expanded="false" />
+            <element signature="e#6684#7323#0" expanded="false" />
+            <element signature="e#7367#7545#0" expanded="false" />
+            <element signature="e#7585#7705#0" expanded="false" />
+            <element signature="e#7742#7896#0" expanded="false" />
+            <element signature="e#7938#8083#0" expanded="false" />
+            <element signature="e#8113#9615#0" expanded="false" />
+            <element signature="e#8488#8611#0" expanded="false" />
+            <element signature="e#8671#8793#0" expanded="false" />
+            <element signature="e#8835#8852#0" expanded="false" />
+            <element signature="e#9649#11993#0" expanded="false" />
+            <element signature="e#9915#10743#0" expanded="false" />
+            <element signature="e#10789#10928#0" expanded="false" />
+            <element signature="e#10972#11844#0" expanded="false" />
+            <element signature="e#12042#12406#0" expanded="false" />
+            <element signature="e#12457#13382#0" expanded="false" />
+            <element signature="e#13462#14085#0" expanded="false" />
+            <element signature="e#14131#14796#0" expanded="false" />
+            <element signature="e#14845#14977#0" expanded="false" />
+            <element signature="e#15042#15222#0" expanded="false" />
+            <element signature="e#15285#15791#0" expanded="false" />
+            <element signature="e#15831#16026#0" expanded="false" />
+            <element signature="e#16082#16755#0" expanded="false" />
+            <element signature="e#16805#17038#0" expanded="false" />
           </folding>
         </state>
       </provider>
